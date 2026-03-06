@@ -20,17 +20,18 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 	- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
  
 ---
- 
-### BI: Analytics & Reporting (Data Analytics)
- 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-	- **Customer Behavior**
-	- **Product Performance**
-	- **Sales Trends**
- 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
- 
+
+ ## Data Architecture
+
+ The Data Architecture for this project follows Medallion Architecture Broze, Silver and Gold Layers:
+
+
+ <img width="771" height="748" alt="Data Architecture" src="https://github.com/user-attachments/assets/76f4d9cc-7862-4e22-8618-840ae984a03f" />
+
+1. Broze Layer: Stores raw data ingested directly from source systems with minimal or no transformation. It acts as the initial landing zone for preserving the original data.
+2. Silver Layer: Contains cleaned, standardized, and transformed data derived from the Bronze layer. This layer improves data quality by removing duplicates, correcting formats, and applying business rules.
+3. Gold Layer: Houses business- ready data modeled into star schema required for reporting and analytics.
+
 ---
  
 ## License
